@@ -1,0 +1,2612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wolfcrest Nutraceuticals | Premium Canadian Pet Supplements</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ── RESET & BASE ─────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --forest:     #1C5C3A;
+  --forest-dk:  #0F3522;
+  --forest-mid: #2A7A50;
+  --forest-lt:  #EAF3ED;
+  --gold:       #B8832A;
+  --gold-lt:    #F5ECD9;
+  --cream:      #F8F5EE;
+  --parchment:  #EDE8DF;
+  --ink:        #1A1A18;
+  --ink-mid:    #3D3C39;
+  --muted:      #7A786F;
+  --border:     #D8D2C6;
+  --white:      #FFFFFF;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── TYPOGRAPHY ───────────────────────────────────── */
+.serif { font-family: 'Cormorant Garamond', serif; }
+
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.15; }
+
+/* ── NAV ──────────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px;
+  height: 72px;
+  background: rgba(248, 245, 238, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 500; letter-spacing: 0.08em;
+  color: var(--forest-dk); text-decoration: none;
+  display: flex; align-items: center; gap: 10px;
+}
+
+.nav-logo-mark {
+  width: 32px; height: 32px;
+  background: var(--forest-dk);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav-logo-mark svg { width: 18px; height: 18px; fill: var(--gold); }
+
+.nav-links {
+  display: flex; align-items: center; gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-mid);
+  text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--forest); }
+
+.nav-cta {
+  background: var(--forest-dk); color: var(--white) !important;
+  padding: 10px 24px; border-radius: 2px;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--forest-mid) !important; }
+
+/* ── HERO ─────────────────────────────────────────── */
+.hero {
+  display: grid; grid-template-columns: 1fr 1fr;
+  padding-top: 72px;
+  position: relative; overflow: hidden;
+}
+
+.hero-bg-accent {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 70% 50%, var(--forest-lt) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-left {
+  display: flex; flex-direction: column;
+  justify-content: center;
+  padding: 56px 64px 56px 80px;
+  position: relative; z-index: 1;
+}
+
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 28px;
+}
+
+.hero-eyebrow-line {
+  width: 40px; height: 1px;
+  background: var(--gold);
+}
+
+.hero-eyebrow span {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold);
+}
+
+.hero h1 {
+  font-size: clamp(52px, 5.5vw, 80px);
+  color: var(--forest-dk);
+  margin-bottom: 24px;
+  line-height: 1.05;
+}
+
+.hero h1 em {
+  font-style: italic; color: var(--forest-mid);
+}
+
+.hero-sub {
+  font-size: 17px; color: var(--muted);
+  max-width: 440px; line-height: 1.75;
+  margin-bottom: 44px;
+}
+
+.hero-actions {
+  display: flex; align-items: center; gap: 24px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--forest-dk); color: var(--white);
+  padding: 16px 36px; border-radius: 2px;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--forest-mid); transform: translateY(-1px); }
+
+.btn-ghost {
+  color: var(--forest-dk); font-size: 13px;
+  font-weight: 600; letter-spacing: 0.08em;
+  text-decoration: none; text-transform: uppercase;
+  display: flex; align-items: center; gap: 8px;
+  transition: gap 0.2s;
+}
+.btn-ghost:hover { gap: 14px; }
+.btn-ghost::after { content: '→'; }
+
+.hero-trust {
+  margin-top: 40px;
+  display: flex; align-items: center; gap: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.trust-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 500; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--muted);
+}
+
+.trust-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--forest-mid); }
+
+/* ── HERO RIGHT — Product Showcase ───────────────── */
+.hero-right {
+  display: flex; align-items: center; justify-content: center;
+  padding: 56px 64px;
+  position: relative;
+}
+
+.product-showcase {
+  position: relative; width: 420px; max-width: 100%;
+}
+
+/* Decorative botanical rings */
+.botanical-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(28, 92, 58, 0.12);
+}
+.ring-1 { width: 380px; height: 380px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.ring-2 { width: 480px; height: 480px; top: 50%; left: 50%; transform: translate(-50%, -50%); border-style: dashed; }
+.ring-3 { width: 580px; height: 580px; top: 50%; left: 50%; transform: translate(-50%, -50%); border-color: rgba(28,92,58,0.06); }
+
+.product-cards-stack {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; gap: 16px;
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 28px 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative; overflow: hidden;
+}
+.product-card::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 4px;
+}
+.product-card.mobility::before { background: var(--forest); }
+.product-card.gut::before { background: var(--gold); }
+
+.product-card:hover { transform: translateY(-3px); box-shadow: 0 8px 36px rgba(0,0,0,0.1); }
+
+.pc-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; margin-bottom: 8px;
+  display: block;
+}
+.mobility .pc-tag { color: var(--forest); }
+.gut .pc-tag { color: var(--gold); }
+
+.pc-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 500; color: var(--forest-dk);
+  margin-bottom: 4px;
+}
+
+.pc-desc { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+
+.pc-badges {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+
+.badge {
+  font-size: 11px; font-weight: 500;
+  padding: 3px 10px; border-radius: 100px;
+  background: var(--cream); color: var(--ink-mid);
+  border: 1px solid var(--border);
+}
+.badge.green { background: var(--forest-lt); color: var(--forest); border-color: transparent; }
+.badge.gold { background: var(--gold-lt); color: var(--gold); border-color: transparent; }
+
+.pc-price {
+  position: absolute; top: 28px; right: 32px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; color: var(--forest-dk); font-weight: 500;
+}
+.pc-price small { font-size: 13px; font-family: 'Jost', sans-serif; color: var(--muted); font-weight: 400; }
+
+/* ── SECTION SHARED ───────────────────────────────── */
+.section { padding: 112px 80px; }
+.section-alt { background: var(--parchment); }
+.section-dark { background: var(--forest-dk); color: var(--white); }
+
+.section-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.25em;
+  text-transform: uppercase;
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 20px;
+}
+.section-label .line { flex: 0 0 32px; height: 1px; background: currentColor; }
+
+.section-title { font-size: clamp(38px, 4vw, 58px); margin-bottom: 16px; }
+.section-intro { font-size: 17px; color: var(--muted); max-width: 600px; line-height: 1.75; margin-bottom: 56px; }
+
+/* ── TRANSPARENCY / FORMULATION SECTION ──────────── */
+.section-dark {
+  background: var(--forest-dk);
+  color: var(--white);
+}
+
+.transparency-inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  align-items: center;
+}
+
+.section-dark h2 { color: var(--white); font-size: clamp(36px, 4vw, 54px); margin-bottom: 16px; }
+.section-dark h2 em { color: var(--gold); font-style: italic; }
+.section-dark p { color: rgba(255,255,255,0.65); font-size: 16px; line-height: 1.8; }
+
+.no-msm-callout {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.no-msm-callout h3 {
+  color: var(--gold); font-size: 28px;
+  font-style: italic; margin-bottom: 12px;
+}
+
+.no-msm-callout p {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px; line-height: 1.75;
+}
+
+.no-msm-verdict {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold);
+}
+
+/* ── PRODUCTS DEEP DIVE ───────────────────────────── */
+.products-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+}
+
+.product-panel {
+  background: var(--white);
+  border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.product-panel-header {
+  padding: 40px 40px 32px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.product-panel-header.mob { border-top: 5px solid var(--forest); }
+.product-panel-header.gut { border-top: 5px solid var(--gold); }
+
+.pph-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 10px; display: block; }
+.mob .pph-tag { color: var(--forest); }
+.gut .pph-tag { color: var(--gold); }
+
+.pph-name { font-size: 36px; color: var(--forest-dk); margin-bottom: 6px; }
+.pph-sub { font-size: 14px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+
+.pph-price {
+  position: absolute; top: 40px; right: 40px;
+  text-align: right;
+}
+.pph-price .amount { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: var(--forest-dk); font-weight: 500; }
+.pph-price .period { font-size: 12px; color: var(--muted); display: block; }
+
+.product-panel-body { padding: 32px 40px; }
+
+.ing-section-title {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.ingredient-list { list-style: none; margin-bottom: 28px; }
+
+.ingredient-item {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--cream);
+  font-size: 14px;
+}
+.ingredient-item:last-child { border-bottom: none; }
+
+.ing-info { display: flex; flex-direction: column; gap: 2px; }
+.ing-name-row { display: flex; align-items: center; gap: 8px; }
+.ing-name { font-weight: 500; color: var(--ink); }
+.ing-origin { font-size: 11px; color: var(--muted); font-style: italic; }
+.ing-dose { font-size: 12px; font-weight: 600; color: var(--forest); font-family: 'Cormorant Garamond', serif; font-size: 15px; }
+.ing-badge-sm {
+  font-size: 9px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 1px 6px; border-radius: 2px;
+}
+.ing-badge-sm.star { background: var(--forest-lt); color: var(--forest); }
+
+.excluded-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px;
+  background: #fff9f0;
+  border: 1px solid #f0d9a8;
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--ink-mid);
+}
+.excluded-x { font-size: 16px; color: #c97c20; font-weight: 700; }
+
+/* ── SCIENCE SECTION ──────────────────────────────── */
+.science-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
+
+.science-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 32px 28px;
+  position: relative;
+}
+
+.evidence-tier {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+
+.tier-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.tier-strong .tier-dot { background: var(--forest); }
+.tier-strong .tier-label { color: var(--forest); }
+.tier-promising .tier-dot { background: var(--gold); }
+.tier-promising .tier-label { color: var(--gold); }
+.tier-mechanism .tier-dot { background: var(--muted); }
+.tier-mechanism .tier-label { color: var(--muted); }
+
+.science-ing { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--forest-dk); margin-bottom: 8px; }
+.science-claim { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+
+.study-ref {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 10px 12px;
+  background: var(--cream);
+  border-radius: 4px;
+  font-size: 11px; color: var(--muted); line-height: 1.5;
+}
+.study-ref a { color: var(--forest); text-decoration: none; font-weight: 600; }
+.study-ref a:hover { text-decoration: underline; }
+
+/* ── DOSING ───────────────────────────────────────── */
+.dosing-wrapper {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;
+}
+
+.dosing-table-wrap {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 8px; overflow: hidden;
+}
+
+.dosing-table-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--forest);
+}
+
+table { width: 100%; border-collapse: collapse; }
+thead th {
+  padding: 10px 20px;
+  background: var(--cream);
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted);
+  text-align: left; border-bottom: 1px solid var(--border);
+}
+tbody td {
+  padding: 12px 20px;
+  font-size: 14px; color: var(--ink-mid);
+  border-bottom: 1px solid var(--cream);
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover td { background: var(--cream); }
+.dose-val { font-weight: 600; color: var(--forest); }
+.loading-val { font-size: 12px; color: var(--muted); }
+
+.dosing-note {
+  padding: 20px 24px;
+  background: var(--forest-lt);
+  border-top: 1px solid rgba(28, 92, 58, 0.15);
+  font-size: 13px; color: var(--forest); line-height: 1.6;
+}
+.dosing-note strong { font-weight: 600; }
+
+/* ── NATURAL SOURCING ─────────────────────────────── */
+.sourcing-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+}
+
+.sourcing-card {
+  text-align: center; padding: 32px 20px;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.sourcing-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+
+.sourcing-icon {
+  width: 64px; height: 64px;
+  background: var(--forest-lt); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px; margin: 0 auto 18px;
+}
+
+.sourcing-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--forest-dk); margin-bottom: 6px; }
+.sourcing-origin { font-size: 12px; color: var(--gold); font-style: italic; margin-bottom: 8px; }
+.sourcing-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+
+/* ── ABOUT / STORY ────────────────────────────────── */
+.story-layout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+}
+
+.story-visual {
+  position: relative;
+}
+
+.story-img-placeholder {
+  width: 100%; aspect-ratio: 4/5;
+  background: var(--forest-lt);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; position: relative;
+}
+
+.story-visual-pattern {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle at 30% 70%, rgba(28,92,58,0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 70% 30%, rgba(184,131,42,0.06) 0%, transparent 50%);
+}
+
+.story-monogram {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 120px; font-weight: 300;
+  color: rgba(28, 92, 58, 0.12);
+  line-height: 1;
+  position: relative; z-index: 1;
+  user-select: none;
+}
+
+.story-accent-box {
+  position: absolute; bottom: -28px; right: -28px;
+  background: var(--forest-dk);
+  padding: 28px 32px; border-radius: 4px;
+  color: var(--white);
+  box-shadow: 0 8px 32px rgba(15,53,34,0.3);
+}
+.story-accent-box .big { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 500; color: var(--gold); line-height: 1; }
+.story-accent-box .label { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 4px; }
+
+.story-content h2 { font-size: clamp(36px, 3.5vw, 50px); color: var(--forest-dk); margin-bottom: 24px; }
+.story-content p { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 20px; }
+
+.story-pillars { margin-top: 36px; display: flex; flex-direction: column; gap: 16px; }
+
+.story-pillar {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 16px; background: var(--cream); border-radius: 4px;
+}
+.pillar-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+.pillar-name { font-weight: 600; font-size: 14px; color: var(--ink); margin-bottom: 2px; }
+.pillar-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+/* ── CTA ──────────────────────────────────────────── */
+.cta-section {
+  background: var(--forest-dk);
+  padding: 112px 80px;
+  text-align: center;
+}
+
+.cta-section h2 { color: var(--white); font-size: clamp(40px, 5vw, 68px); margin-bottom: 20px; }
+.cta-section h2 em { color: var(--gold); font-style: italic; }
+.cta-section p { color: rgba(255,255,255,0.6); font-size: 17px; max-width: 520px; margin: 0 auto 48px; line-height: 1.75; }
+
+.cta-cards {
+  display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.cta-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px; padding: 32px 40px;
+  text-align: left; min-width: 240px;
+  cursor: pointer; transition: background 0.2s, border-color 0.2s;
+}
+.cta-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
+
+.cta-card-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: block; }
+.cta-card-name { font-family: 'Cormorant Garamond', serif; font-size: 26px; color: var(--white); margin-bottom: 4px; }
+.cta-card-price { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 20px; }
+.cta-card-btn {
+  display: inline-block;
+  background: var(--gold); color: var(--forest-dk);
+  padding: 10px 22px; border-radius: 2px;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; text-decoration: none;
+  transition: background 0.2s;
+}
+.cta-card-btn:hover { background: #d4a040; }
+
+.cta-bundle {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.08);
+  border: 1px dashed rgba(184,131,42,0.4);
+  border-radius: 4px; padding: 16px 28px;
+  font-size: 14px; color: rgba(255,255,255,0.7);
+  cursor: pointer; transition: all 0.2s;
+  text-decoration: none;
+}
+.cta-bundle:hover { background: rgba(184,131,42,0.12); border-color: var(--gold); color: var(--white); }
+.bundle-badge {
+  background: var(--gold); color: var(--forest-dk);
+  font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 2px;
+}
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer {
+  background: var(--ink);
+  padding: 64px 80px 40px;
+}
+
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px; margin-bottom: 56px;
+}
+
+.footer-brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px; color: var(--white); font-weight: 500;
+  letter-spacing: 0.06em; margin-bottom: 12px;
+}
+
+.footer-tagline { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 220px; }
+.footer-vhp {
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; padding: 5px 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 2px; color: rgba(255,255,255,0.4);
+}
+
+.footer-col-title {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: rgba(255,255,255,0.4);
+  margin-bottom: 18px;
+}
+
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a {
+  font-size: 14px; color: rgba(255,255,255,0.55);
+  text-decoration: none; transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--white); }
+
+.footer-bottom {
+  padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+  font-size: 12px; color: rgba(255,255,255,0.3);
+}
+
+/* ── SCROLL ANIMATIONS ────────────────────────────── */
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+@media (max-width: 1100px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 56px 48px; }
+  .hero-right { padding: 40px 48px; }
+  .products-grid { grid-template-columns: 1fr; }
+  .science-grid { grid-template-columns: 1fr 1fr; }
+  .sourcing-grid { grid-template-columns: 1fr 1fr; }
+  .story-layout { grid-template-columns: 1fr; }
+  .story-accent-box { display: none; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .section { padding: 72px 32px; }
+  .transparency-inner { grid-template-columns: 1fr; gap: 40px; }
+  .dosing-wrapper { grid-template-columns: 1fr; }
+  .science-grid { grid-template-columns: 1fr; }
+  .sourcing-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .hero-left { padding: 48px 32px; }
+  .cta-section { padding: 72px 32px; }
+}
+/* ── QUIZ ─────────────────────────────────────────── */
+.quiz-overlay {
+  position: fixed; inset: 0; z-index: 900;
+  background: var(--cream);
+  display: flex; flex-direction: column;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+}
+.quiz-overlay.open { opacity: 1; pointer-events: all; }
+
+.quiz-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--cream);
+  position: sticky; top: 0; z-index: 10;
+}
+
+.quiz-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 500;
+  color: var(--forest-dk); letter-spacing: 0.06em;
+}
+
+.quiz-progress-wrap {
+  flex: 1; max-width: 240px; margin: 0 40px;
+}
+.quiz-progress-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: 6px; text-align: center;
+}
+.quiz-progress-bar {
+  height: 3px; background: var(--border); border-radius: 100px; overflow: hidden;
+}
+.quiz-progress-fill {
+  height: 100%; background: var(--forest);
+  border-radius: 100px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
+
+.quiz-close {
+  background: none; border: none; cursor: pointer;
+  font-size: 20px; color: var(--muted); padding: 4px;
+  transition: color 0.15s; line-height: 1;
+}
+.quiz-close:hover { color: var(--ink); }
+
+.quiz-body {
+  flex: 1; display: flex; align-items: flex-start;
+  justify-content: center;
+  padding: 64px 40px 80px;
+}
+
+.quiz-step {
+  max-width: 640px; width: 100%;
+  display: none;
+  animation: quizFadeIn 0.35s ease forwards;
+}
+.quiz-step.active { display: block; }
+
+@keyframes quizFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.quiz-step-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.quiz-step h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500; color: var(--forest-dk);
+  line-height: 1.2; margin-bottom: 10px;
+}
+.quiz-step h2 em { font-style: italic; color: var(--forest-mid); }
+
+.quiz-step-sub {
+  font-size: 15px; color: var(--muted);
+  margin-bottom: 36px; line-height: 1.65;
+}
+
+/* Option cards */
+.quiz-options {
+  display: flex; flex-direction: column; gap: 12px;
+  margin-bottom: 12px;
+}
+.quiz-options.two-col {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+
+.quiz-option {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--border); border-radius: 6px;
+  background: var(--white); cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  text-align: left; width: 100%;
+  font-family: 'Jost', sans-serif;
+}
+.quiz-option:hover { border-color: var(--forest-mid); background: var(--forest-lt); }
+.quiz-option.selected { border-color: var(--forest); background: var(--forest-lt); border-width: 2px; }
+
+.quiz-option-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+.quiz-option-text { flex: 1; }
+.quiz-option-label {
+  font-size: 15px; font-weight: 500; color: var(--ink);
+  display: block; margin-bottom: 2px;
+}
+.quiz-option-desc { font-size: 13px; color: var(--muted); line-height: 1.4; }
+
+.quiz-option-check {
+  width: 20px; height: 20px; border-radius: 50%;
+  border: 1.5px solid var(--border); flex-shrink: 0;
+  margin-top: 2px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.quiz-option.selected .quiz-option-check {
+  background: var(--forest); border-color: var(--forest);
+  color: white; font-size: 11px;
+}
+
+/* Text input step */
+.quiz-input-wrap { margin-bottom: 28px; }
+.quiz-input-wrap input {
+  width: 100%; padding: 16px 18px;
+  border: 1px solid var(--border); border-radius: 6px;
+  background: var(--white); font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 400; color: var(--forest-dk);
+  transition: border-color 0.15s;
+}
+.quiz-input-wrap input:focus { outline: none; border-color: var(--forest); }
+.quiz-input-wrap input::placeholder { color: var(--border); }
+
+/* Weight selector */
+.quiz-weight-options {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  margin-bottom: 12px;
+}
+.quiz-weight-btn {
+  padding: 16px 12px; border: 1px solid var(--border);
+  border-radius: 6px; background: var(--white); cursor: pointer;
+  font-family: 'Jost', sans-serif; text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+.quiz-weight-btn:hover { border-color: var(--forest-mid); background: var(--forest-lt); }
+.quiz-weight-btn.selected { border-color: var(--forest); background: var(--forest-lt); border-width: 2px; }
+.quiz-weight-btn .weight-range { font-size: 16px; font-weight: 600; color: var(--ink); display: block; }
+.quiz-weight-btn .weight-example { font-size: 12px; color: var(--muted); display: block; margin-top: 2px; }
+
+/* Nav buttons */
+.quiz-nav {
+  display: flex; align-items: center; gap: 16px;
+  margin-top: 8px;
+}
+.quiz-btn-next {
+  padding: 15px 36px;
+  background: var(--forest-dk); color: var(--white);
+  border: none; border-radius: 2px; cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.15s;
+  display: flex; align-items: center; gap: 8px;
+}
+.quiz-btn-next:hover { background: var(--forest-mid); transform: translateY(-1px); }
+.quiz-btn-next:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+.quiz-btn-back {
+  background: none; border: none; cursor: pointer;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 4px; transition: color 0.15s;
+  font-family: 'Jost', sans-serif;
+}
+.quiz-btn-back:hover { color: var(--ink); }
+
+/* Multi-select hint */
+.quiz-multiselect-hint {
+  font-size: 12px; color: var(--muted); margin-bottom: 16px;
+  display: flex; align-items: center; gap: 6px;
+}
+
+/* Results screen */
+.quiz-results { max-width: 720px; width: 100%; display: none; }
+.quiz-results.active { display: block; animation: quizFadeIn 0.4s ease forwards; }
+
+.results-greeting {
+  font-size: 14px; color: var(--muted); margin-bottom: 6px;
+}
+.results-greeting strong { color: var(--forest-dk); }
+
+.quiz-results h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 4vw, 44px); font-weight: 500;
+  color: var(--forest-dk); margin-bottom: 6px; line-height: 1.15;
+}
+.quiz-results h2 em { font-style: italic; color: var(--forest-mid); }
+
+.results-tagline {
+  font-size: 16px; color: var(--muted);
+  margin-bottom: 40px; line-height: 1.6;
+}
+
+.results-cards { display: flex; flex-direction: column; gap: 20px; margin-bottom: 32px; }
+
+.result-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 8px; overflow: hidden;
+}
+.result-card-header {
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid var(--cream);
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px;
+}
+.result-card-header.mob { border-top: 4px solid var(--forest); }
+.result-card-header.gut { border-top: 4px solid var(--gold); }
+
+.result-card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 500; color: var(--forest-dk);
+}
+.result-card-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; margin-bottom: 4px; display: block;
+}
+.mob .result-card-tag { color: var(--forest); }
+.gut .result-card-tag { color: var(--gold); }
+
+.result-card-price {
+  text-align: right; flex-shrink: 0;
+}
+.result-card-price .price-amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; color: var(--forest-dk); font-weight: 500;
+  display: block;
+}
+.result-card-price .price-sub { font-size: 12px; color: var(--muted); }
+
+.result-card-body { padding: 20px 28px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+.result-stat { }
+.result-stat-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
+}
+.result-stat-val { font-size: 15px; font-weight: 500; color: var(--ink); }
+.result-stat-val.highlight { color: var(--forest); }
+
+.result-note {
+  padding: 14px 28px;
+  background: var(--cream);
+  font-size: 13px; color: var(--muted); line-height: 1.5;
+  border-top: 1px solid var(--border);
+}
+.result-note strong { color: var(--ink); }
+
+.results-cta-row {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.results-cta-primary {
+  padding: 16px 36px; background: var(--forest-dk); color: var(--white);
+  border: none; border-radius: 2px; cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; transition: background 0.2s;
+}
+.results-cta-primary:hover { background: var(--forest-mid); }
+.results-cta-secondary {
+  font-size: 13px; color: var(--muted); cursor: pointer;
+  background: none; border: none; font-family: 'Jost', sans-serif;
+  text-decoration: underline; text-decoration-color: transparent;
+  transition: color 0.15s, text-decoration-color 0.15s;
+  padding: 0;
+}
+.results-cta-secondary:hover { color: var(--forest); text-decoration-color: var(--forest); }
+
+</style>
+<style>
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(10, 28, 18, 0.72);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+
+.modal {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 48px 52px;
+  max-width: 520px; width: 100%;
+  position: relative;
+  transform: translateY(16px);
+  transition: transform 0.25s ease;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+}
+.modal-overlay.open .modal { transform: translateY(0); }
+
+.modal-close {
+  position: absolute; top: 20px; right: 24px;
+  background: none; border: none; cursor: pointer;
+  font-size: 22px; color: var(--muted); line-height: 1;
+  padding: 4px; transition: color 0.15s;
+}
+.modal-close:hover { color: var(--ink); }
+
+.modal-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 12px;
+}
+.modal-eyebrow.mobility { color: var(--forest); }
+.modal-eyebrow.bundle { color: var(--gold); }
+
+.modal h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; font-weight: 500;
+  color: var(--forest-dk); margin-bottom: 10px; line-height: 1.2;
+}
+
+.modal-body {
+  font-size: 15px; color: var(--muted); line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.modal-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--forest-lt); color: var(--forest);
+  font-size: 13px; font-weight: 500;
+  padding: 8px 16px; border-radius: 100px;
+  margin-bottom: 24px;
+}
+.modal-badge svg { width: 14px; height: 14px; fill: var(--forest); }
+
+.modal-form { display: flex; flex-direction: column; gap: 12px; }
+
+.modal-field {
+  display: flex; flex-direction: column; gap: 6px;
+}
+.modal-field label {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+}
+.modal-field input {
+  width: 100%; padding: 13px 16px;
+  border: 1px solid var(--border); border-radius: 4px;
+  background: var(--white); font-family: 'Jost', sans-serif;
+  font-size: 15px; color: var(--ink);
+  transition: border-color 0.15s;
+}
+.modal-field input:focus {
+  outline: none; border-color: var(--forest);
+}
+
+.modal-submit {
+  width: 100%; padding: 16px;
+  background: var(--forest-dk); color: var(--white);
+  border: none; border-radius: 2px; cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 4px;
+}
+.modal-submit:hover { background: var(--forest-mid); transform: translateY(-1px); }
+.modal-submit:active { transform: translateY(0); }
+
+.modal-legal {
+  font-size: 11px; color: var(--muted);
+  text-align: center; margin-top: 12px; line-height: 1.5;
+}
+
+.modal-success {
+  text-align: center; padding: 16px 0; display: none;
+}
+.modal-success.show { display: block; }
+.modal-success-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--forest-lt);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 24px;
+}
+.modal-success h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; color: var(--forest-dk); margin-bottom: 8px;
+}
+.modal-success p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════ -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8 2 5 5 5 9c0 2.5 1.2 4.7 3 6.1V20h8v-4.9C17.8 13.7 19 11.5 19 9c0-4-3-7-7-7zm-1 14v2H9v-2H8v-1.3C6.8 13.5 6 11.3 6 9c0-3.3 2.7-6 6-6s6 2.7 6 6c0 2.3-.8 4.5-2 5.7V16h-1v-2h-2v2h-2z"/>
+      </svg>
+    </div>
+    Wolfcrest
+  </a>
+  <ul class="nav-links">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#science">The Science</a></li>
+    <li><a href="#natural">Natural Sourcing</a></li>
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#subscribe" class="nav-cta" onclick="openModal('general'); return false;">Subscribe & Save</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg-accent"></div>
+
+  <div class="hero-left">
+    <div class="hero-eyebrow reveal">
+      <div class="hero-eyebrow-line"></div>
+      <span>Premium Canadian Pet Supplements</span>
+    </div>
+
+    <h1 class="reveal reveal-delay-1">
+      Every ingredient<br><em>earns its place.</em>
+    </h1>
+
+    <p class="hero-sub reveal reveal-delay-2">
+      Two supplements for dogs. Every ingredient listed with its dose, its source, and the study behind it. Including the one ingredient most joint supplements have that we do not.
+    </p>
+
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="#" class="btn-primary" onclick="openModal('general'); return false;">Join the Founding Waitlist</a>
+      <a href="#products" class="btn-ghost">See the Formulas</a>
+    </div>
+
+    <div class="hero-trust reveal reveal-delay-4">
+      <div class="trust-item"><div class="trust-dot"></div> Made in Canada</div>
+      <div class="trust-item"><div class="trust-dot"></div> Health Canada VHP Registered</div>
+      <div class="trust-item"><div class="trust-dot"></div> GMP Certified Facility</div>
+    </div>
+  </div>
+
+  <div class="hero-right reveal">
+    <div class="product-showcase">
+      <div class="botanical-ring ring-1"></div>
+      <div class="botanical-ring ring-2"></div>
+      <div class="botanical-ring ring-3"></div>
+
+      <div class="product-cards-stack">
+        <div class="product-card mobility">
+          <span class="pc-tag">Joint & Hip Support</span>
+          <div class="pc-name">Mobility+</div>
+          <div class="pc-desc">Soft chew · 30 per jar · All dog sizes</div>
+          <div class="pc-badges">
+            <span class="badge green">NZ Green-Lipped Mussel</span>
+            <span class="badge green">Glucosamine Sulfate</span>
+            <span class="badge">Boswellia · Turmeric</span>
+            <span class="badge gold">No MSM</span>
+          </div>
+          <div class="pc-price">$44.99 <small>/mo</small></div>
+        </div>
+
+        <div class="product-card gut">
+          <span class="pc-tag">Digestive & Immune</span>
+          <div class="pc-name">Gut Guard</div>
+          <div class="pc-desc">Daily powder · 150g · 30 servings</div>
+          <div class="pc-badges">
+            <span class="badge green">5-Strain Probiotic Synbiotic</span>
+            <span class="badge green">Organic Pumpkin</span>
+            <span class="badge gold">Gut-Brain Formula</span>
+          </div>
+          <div class="pc-price">$38.99 <small>/mo</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     PRODUCTS
+═══════════════════════════════════════════════════ -->
+<section class="section" id="products">
+  <div class="section-label reveal">
+    <div class="line" style="background:var(--gold)"></div>
+    <span style="color:var(--gold)">The Formulas</span>
+  </div>
+  <h2 class="section-title reveal">Two products. Every ingredient justified.</h2>
+  <p class="section-intro reveal">Mobility+ for joints. Gut Guard for digestion. Each formula lists every active ingredient with its dose, its source, and what it does. The research behind each is linked on the science page below.</p>
+
+  <div class="products-grid">
+
+    <!-- MOBILITY+ -->
+    <div class="product-panel reveal">
+      <div class="product-panel-header mob">
+        <div class="pph-price">
+          <div class="amount">$44.99</div>
+          <span class="period">per month</span>
+        </div>
+        <span class="pph-tag">SKU 01 · Soft Chew · 30 per jar</span>
+        <div class="pph-name">Mobility+</div>
+        <div class="pph-sub">A joint and hip support chew formulated for dogs aged five and up, active breeds, and larger dogs prone to hip and joint concerns. The soft chew format means even picky eaters take it willingly, every day.</div>
+        <div class="pc-badges">
+          <span class="badge">Weight-Based Dosing</span>
+          <span class="badge">4 to 6 Week Loading Phase</span>
+          <span class="badge green">No MSM</span>
+        </div>
+      </div>
+      <div class="product-panel-body">
+        <div class="ing-section-title">Active Ingredients</div>
+        <ul class="ingredient-list">
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row">
+                <span class="ing-name">Glucosamine Sulfate</span>
+                <span class="ing-badge-sm star">Sulfate form</span>
+              </div>
+              <span class="ing-origin">From shrimp shells. The same compound your dog's cartilage is built from.</span>
+            </div>
+            <span class="ing-dose">500 mg</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row"><span class="ing-name">Chondroitin Sulfate</span></div>
+              <span class="ing-origin">Bovine cartilage. Cartilage's primary structural protein.</span>
+            </div>
+            <span class="ing-dose">400 mg</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row">
+                <span class="ing-name">Green-Lipped Mussel (NZ)</span>
+                <span class="ing-badge-sm star">Strongest evidence</span>
+              </div>
+              <span class="ing-origin">Sustainably farmed, Marlborough Sounds, New Zealand. Natural omega-3 ETA plus glucosamine, chondroitin, and minerals.</span>
+            </div>
+            <span class="ing-dose">300 mg</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row"><span class="ing-name">Boswellia Serrata Extract</span></div>
+              <span class="ing-origin">Indian tree resin, 65% boswellic acids. Fast-acting plant anti-inflammatory.</span>
+            </div>
+            <span class="ing-dose">200 mg</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row"><span class="ing-name">Turmeric Extract</span></div>
+              <span class="ing-origin">95% curcuminoids. Broad-spectrum anti-inflammatory.</span>
+            </div>
+            <span class="ing-dose">150 mg</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row"><span class="ing-name">Vitamin C (Calcium Ascorbate)</span></div>
+              <span class="ing-origin">Essential collagen co-factor. The thread in cartilage's fabric.</span>
+            </div>
+            <span class="ing-dose">50 mg</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row"><span class="ing-name">Hyaluronic Acid</span></div>
+              <span class="ing-origin">Natural joint lubricant. Declines with age.</span>
+            </div>
+            <span class="ing-dose">20 mg</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row"><span class="ing-name">Black Pepper Extract (Bioperine®)</span></div>
+              <span class="ing-origin">Increases curcumin absorption by up to 20x. The key that unlocks turmeric.</span>
+            </div>
+            <span class="ing-dose">5 mg</span>
+          </li>
+        </ul>
+        <div class="excluded-item">
+          <span class="excluded-x">✕</span>
+          <div>
+            <strong>No MSM.</strong> Deliberately excluded. Published veterinary research shows very limited evidence for its benefit in dogs. The full reasoning is at wolfcrestnaturals.ca/why-no-msm
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GUT GUARD -->
+    <div class="product-panel reveal reveal-delay-2">
+      <div class="product-panel-header gut">
+        <div class="pph-price">
+          <div class="amount">$38.99</div>
+          <span class="period">per month</span>
+        </div>
+        <span class="pph-tag">SKU 02 · Daily Powder · 150g · 30 servings</span>
+        <div class="pph-name">Gut Guard</div>
+        <div class="pph-sub">A digestive and immune support powder built as a true synbiotic: five clinically studied probiotic strains paired with prebiotic fibre. Powder format is intentional. It keeps probiotic strains alive in a way that soft chew manufacturing cannot.</div>
+        <div class="pc-badges">
+          <span class="badge gold">Gut-Brain Axis Formula</span>
+          <span class="badge">No Refrigeration Needed</span>
+          <span class="badge">Named Strains + CFU Counts</span>
+        </div>
+      </div>
+      <div class="product-panel-body">
+        <div class="ing-section-title">Probiotic Blend: 5 Billion CFU Total</div>
+        <ul class="ingredient-list">
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row">
+                <span class="ing-name">L. acidophilus NCFM</span>
+                <span class="ing-badge-sm star">Most studied</span>
+              </div>
+              <span class="ing-origin">The most studied canine probiotic strain. Core microbiome support.</span>
+            </div>
+            <span class="ing-dose">2B CFU</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row">
+                <span class="ing-name">L. rhamnosus LGG</span>
+                <span class="ing-badge-sm star">Cornell Vet</span>
+              </div>
+              <span class="ing-origin">Recommended by Cornell University Vet Medicine for canine diarrhea</span>
+            </div>
+            <span class="ing-dose">1B CFU</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row">
+                <span class="ing-name">B. longum BL999</span>
+                <span class="ing-badge-sm star">Gut-brain</span>
+              </div>
+              <span class="ing-origin">Purina research: 90% of dogs showed reduced anxiety behaviours</span>
+            </div>
+            <span class="ing-dose">1B CFU</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row"><span class="ing-name">E. faecium SF68</span></div>
+              <span class="ing-origin">The global veterinary gold-standard probiotic strain. Restores gut balance after antibiotics.</span>
+            </div>
+            <span class="ing-dose">500M CFU</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row"><span class="ing-name">B. coagulans BC30®</span></div>
+              <span class="ing-origin">Spore-forming. Survives stomach acid and room temperature storage.</span>
+            </div>
+            <span class="ing-dose">500M CFU</span>
+          </li>
+        </ul>
+        <div class="ing-section-title">Additional Active Ingredients</div>
+        <ul class="ingredient-list">
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row"><span class="ing-name">Inulin / FOS (chicory root)</span></div>
+              <span class="ing-origin">Prebiotic fibre from chicory root. Feeds the probiotics so they actually thrive.</span>
+            </div>
+            <span class="ing-dose">500 mg</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row">
+                <span class="ing-name">Organic Pumpkin Powder</span>
+                <span class="ing-badge-sm star">Vet-recommended</span>
+              </div>
+              <span class="ing-origin">The single most vet-recommended food for dog digestive issues</span>
+            </div>
+            <span class="ing-dose">1,000 mg</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row"><span class="ing-name">Digestive Enzyme Blend</span></div>
+              <span class="ing-origin">Amylase, protease, lipase. The same enzymes your dog's body produces naturally.</span>
+            </div>
+            <span class="ing-dose">50 mg</span>
+          </li>
+          <li class="ingredient-item">
+            <div class="ing-info">
+              <div class="ing-name-row"><span class="ing-name">Ginger Root Extract</span></div>
+              <span class="ing-origin">5% gingerols. 4,000 years of digestive use. Supports gastric motility.</span>
+            </div>
+            <span class="ing-dose">100 mg</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     TRANSPARENCY BANNER
+═══════════════════════════════════════════════════ -->
+<section class="section section-dark" id="formulation">
+  <div class="transparency-inner">
+    <div class="reveal">
+      <div class="section-label" style="color: rgba(255,255,255,0.4)">
+        <div class="line"></div>
+        A note on formulation
+      </div>
+      <h2>Most joint supplements contain MSM. <em>Ours does not.</em></h2>
+      <p style="margin-top:20px">MSM is inexpensive, widely recognised, and present in the majority of pet joint supplements on the market. The published veterinary research, read carefully, consistently shows very limited evidence for its benefit in dogs. So we left it out. The full reasoning is at wolfcrestnaturals.ca/why-no-msm</p>
+    </div>
+
+    <div class="no-msm-callout reveal reveal-delay-2">
+      <h3>What we put in instead</h3>
+      <p>New Zealand Green-Lipped Mussel at 300mg per chew. A 2023 peer-reviewed trial of 75 dogs with hip osteoarthritis found outcomes at 4 and 6 weeks comparable to carprofen, a prescription anti-inflammatory. That is what the same budget buys when it is not spent on MSM.</p>
+      <p style="margin-top:12px">Every other ingredient in Mobility+ follows the same logic. If it is in the formula, there is a study behind it. If the study has limits, those limits are described on the science page.</p>
+      <div class="no-msm-verdict"><a href="#science" style="color:var(--gold);text-decoration:none;">Read the research behind every ingredient</a></div>
+      <div class="no-msm-verdict" style="margin-top:10px;">Evidence first. Convention second.</div>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════════════════
+     DOSING
+═══════════════════════════════════════════════════ -->
+<section class="section section-alt" id="dosing">
+  <div class="section-label reveal" style="color:var(--forest)">
+    <div class="line" style="background:var(--forest)"></div>
+    <span style="color:var(--forest)">Weight-Based Dosing</span>
+  </div>
+  <h2 class="section-title reveal">Every dog is different. Every dose should be too.</h2>
+  <p class="section-intro reveal">A 10 lb Shih Tzu and a 100 lb Labrador are not the same dog. Wolfcrest gives precise dosing tables for both products so every animal gets what is right for their size, not a generic one-size-fits-all estimate.</p>
+
+  <div class="dosing-wrapper">
+    <div>
+      <div class="dosing-table-wrap reveal">
+        <div class="dosing-table-header">Mobility+ Soft Chew: Daily Dosing</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Dog Weight</th>
+              <th>Maintenance</th>
+              <th>Loading (Wks 1–6)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Under 10 kg (22 lb)</td>
+              <td class="dose-val">½ chew</td>
+              <td class="loading-val">1 chew</td>
+            </tr>
+            <tr>
+              <td>10–25 kg (22–55 lb)</td>
+              <td class="dose-val">1 chew</td>
+              <td class="loading-val">2 chews</td>
+            </tr>
+            <tr>
+              <td>25–45 kg (55–100 lb)</td>
+              <td class="dose-val">2 chews</td>
+              <td class="loading-val">3 chews</td>
+            </tr>
+            <tr>
+              <td>Over 45 kg (100+ lb)</td>
+              <td class="dose-val">2–3 chews</td>
+              <td class="loading-val">3–4 chews</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="dosing-note"><strong>The loading phase matters.</strong> Joint supplements need 4 to 6 weeks at a higher dose to reach therapeutic levels. Pet owners who skip it see slower results and cancel early. We put this on every label and in every welcome email.</div>
+      </div>
+
+      <div class="dosing-table-wrap reveal" style="margin-top:24px">
+        <div class="dosing-table-header" style="color:var(--gold)">Gut Guard Powder — Daily Dosing</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Dog Weight</th>
+              <th>Daily Serving</th>
+              <th>When to Give</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Under 5 kg (11 lb)</td>
+              <td class="dose-val">1.5g / quarter scoop</td>
+              <td class="loading-val">Morning meal</td>
+            </tr>
+            <tr>
+              <td>5–15 kg (11–33 lb)</td>
+              <td class="dose-val">3g / half scoop</td>
+              <td class="loading-val">Morning meal</td>
+            </tr>
+            <tr>
+              <td>15–35 kg (33–77 lb)</td>
+              <td class="dose-val">5g / 1 scoop</td>
+              <td class="loading-val">Morning meal</td>
+            </tr>
+            <tr>
+              <td>Over 35 kg (77+ lb)</td>
+              <td class="dose-val">7.5g / 1.5 scoops</td>
+              <td class="loading-val">Morning meal</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="dosing-note" style="background:var(--gold-lt); color:var(--gold); border-color:rgba(184,131,42,0.2)"><strong>Subscription frequency is set by weight.</strong> A 10 lb dog's jar lasts 100 days. A 100 lb dog's lasts 20. Our quiz sets your delivery schedule automatically so you never run out and never build a backlog.</div>
+      </div>
+    </div>
+
+    <div class="reveal reveal-delay-2">
+      <h3 style="font-size:32px;color:var(--forest-dk);margin-bottom:20px">The quiz does the maths.</h3>
+      <p style="color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:24px">When you set up your dog's profile, we ask their name, weight, age, breed, and health concerns. Our recommendation engine then:</p>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="story-pillar">
+          <div class="pillar-icon">🎯</div>
+          <div>
+            <div class="pillar-name">Recommends the right product</div>
+            <div class="pillar-desc">Joint concerns → Mobility+. Digestive issues → Gut Guard. Both → Bundle with 15% off.</div>
+          </div>
+        </div>
+        <div class="story-pillar">
+          <div class="pillar-icon">📦</div>
+          <div>
+            <div class="pillar-name">Sets the delivery frequency</div>
+            <div class="pillar-desc">Based on body weight, calculates exactly how many days each product lasts at the right dose.</div>
+          </div>
+        </div>
+        <div class="story-pillar">
+          <div class="pillar-icon">💊</div>
+          <div>
+            <div class="pillar-name">Personalises every label</div>
+            <div class="pillar-desc">Every jar ships with your dog's name and their specific dose on the label. Not generic instructions.</div>
+          </div>
+        </div>
+        <div class="story-pillar">
+          <div class="pillar-icon">⏰</div>
+          <div>
+            <div class="pillar-name">Sets expectations for results</div>
+            <div class="pillar-desc">We tell you exactly when to expect visible change. Mobility+ at week 4 to 6, Gut Guard within days. You know what to look for, so you stay the course.</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="btn-primary" style="margin-top:32px;display:inline-block" onclick="openQuiz(); return false;">Start the Quiz →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SCIENCE
+═══════════════════════════════════════════════════ -->
+<section class="section" id="science">
+  <div class="section-label reveal" style="color:var(--forest)">
+    <div class="line" style="background:var(--forest)"></div>
+    <span style="color:var(--forest)">The Research</span>
+  </div>
+  <h2 class="section-title reveal">The research behind each ingredient.</h2>
+  <p class="section-intro reveal">Most ingredients have published research behind them. Some have canine-specific clinical trials. Some have strong mechanistic evidence but limited dog-specific data. Two sit closer to long-established veterinary practice than controlled trials. Each card below says which category applies, and links to what actually exists.</p>
+
+  <div class="science-grid">
+
+    <div class="science-card reveal">
+      <div class="evidence-tier tier-strong">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Strong clinical evidence</span>
+      </div>
+      <div class="science-ing">Green-Lipped Mussel</div>
+      <div class="science-claim">A 2023 peer-reviewed, double-blind, placebo-controlled trial of 75 dogs with hip osteoarthritis found that the marine fatty acid compound from New Zealand green-lipped mussel produced outcomes at 4 and 6 weeks comparable to carprofen, a prescription anti-inflammatory.</div>
+      <div class="study-ref">
+        📄 Kampa et al. (2023), <em>Frontiers in Veterinary Science</em><br>
+        <a href="https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2023.1033188/full" target="_blank">Read the study</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal reveal-delay-1">
+      <div class="evidence-tier tier-strong">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Strong clinical evidence</span>
+      </div>
+      <div class="science-ing">L. rhamnosus LGG</div>
+      <div class="science-claim">Cornell University College of Veterinary Medicine specifically names the LGG strain as effective for managing diarrhea in dogs. It is one of the most consistently cited canine probiotic recommendations in veterinary practice.</div>
+      <div class="study-ref">
+        🏛 Cornell University College of Veterinary Medicine<br>
+        <a href="https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/power-probiotics" target="_blank">Cornell Vet reference</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal reveal-delay-2">
+      <div class="evidence-tier tier-promising">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Promising evidence</span>
+      </div>
+      <div class="science-ing">Glucosamine + Chondroitin</div>
+      <div class="science-claim">A randomised, double-blind multicentre trial found statistically significant improvements in pain, weight-bearing, and OA severity by day 70. The overall evidence is encouraging but not definitive. More recent trials have shown stronger outcomes for marine-based omega-3 compounds.</div>
+      <div class="study-ref">
+        📄 McCarthy et al. (2007), <em>The Veterinary Journal</em><br>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/16647870/" target="_blank">PubMed</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal reveal-delay-1">
+      <div class="evidence-tier tier-promising">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Promising evidence</span>
+      </div>
+      <div class="science-ing">Boswellia Serrata</div>
+      <div class="science-claim">A randomised, placebo-controlled, double-blind PLOS ONE trial (2022) of 40 dogs with osteoarthritis found significant improvements in pain scores assessed by both veterinarians and owners at 60 days, using a combination formula that included Boswellia serrata.</div>
+      <div class="study-ref">
+        📄 Comblain et al. (2022), <em>PLOS ONE</em><br>
+        <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263971" target="_blank">Read the study</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal reveal-delay-2">
+      <div class="evidence-tier tier-promising">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Promising evidence</span>
+      </div>
+      <div class="science-ing">B. longum BL999</div>
+      <div class="science-claim">A blinded, crossover Purina study of 24 anxious Labrador Retrievers found that 90% showed reduced anxiety behaviours, 83% had lower cortisol levels, and 75% had lower heart rates. The full study has not yet appeared in a peer-reviewed journal. The summary and methods available are linked below.</div>
+      <div class="study-ref">
+        🔬 McGowan et al., Purina Institute<br>
+        <a href="https://www.purinainstitute.com/centresquare/therapeutic-nutrition/stress-related-behavioral-disorders" target="_blank">Purina Institute</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal reveal-delay-3">
+      <div class="evidence-tier tier-mechanism">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Well-established mechanism</span>
+      </div>
+      <div class="science-ing">Turmeric + Bioperine®</div>
+      <div class="science-claim">Curcumin's NF-kB inhibition mechanism is well documented in published research. Bioperine increases curcumin absorption by up to 20x. Without piperine, most curcumin passes through the gut wall unabsorbed. Both are in the formula.</div>
+      <div class="study-ref">
+        📄 Henrotin et al. (2010), curcuminoid anti-inflammatory mechanism<br>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/20100786/" target="_blank">PubMed</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal reveal-delay-1">
+      <div class="evidence-tier tier-mechanism">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Well-established mechanism</span>
+      </div>
+      <div class="science-ing">Vitamin C (Calcium Ascorbate)</div>
+      <div class="science-claim">Collagen synthesis is biochemically impossible without vitamin C. It is required for the hydroxylation of proline and lysine, two amino acids that form the stable triple-helix structure of collagen. This is established biochemistry, not contested. No canine-specific RCT exists for vitamin C supplementation in isolation, but the biological requirement is not in question.</div>
+      <div class="study-ref">
+        📄 NIH Office of Dietary Supplements , Vitamin C and collagen biosynthesis<br>
+        <a href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/" target="_blank">NIH reference</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal reveal-delay-2">
+      <div class="evidence-tier tier-promising">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Promising evidence</span>
+      </div>
+      <div class="science-ing">Hyaluronic Acid (oral)</div>
+      <div class="science-claim">A prospective, randomised, double-blind clinical study of 55 dogs found that oral hyaluronic acid supplementation for 10 weeks significantly increased HA concentration in synovial fluid and significantly decreased the pro-inflammatory marker paraoxonase-1, compared to placebo. HA concentration declined in the placebo group over the same period.</div>
+      <div class="study-ref">
+        📄 Leal et al. (2021), <em>Animals</em> , oral HA in dogs post-CCL surgery<br>
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8146498/" target="_blank">PMC full text</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal reveal-delay-3">
+      <div class="evidence-tier tier-promising">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Promising evidence</span>
+      </div>
+      <div class="science-ing">L. acidophilus NCFM</div>
+      <div class="science-claim">In healthy adult dogs, L. acidophilus supplementation survived gastrointestinal transit, increased fecal lactobacilli, decreased clostridial organisms, and was associated with systemic immune changes. The NCFM strain specifically has over 45 published clinical trials across species, making it the most studied L. acidophilus strain in existence.</div>
+      <div class="study-ref">
+        📄 Baillon et al. (2004), <em>American Journal of Veterinary Research</em><br>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/15027683/" target="_blank">PubMed</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal">
+      <div class="evidence-tier tier-strong">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Strong clinical evidence</span>
+      </div>
+      <div class="science-ing">E. faecium SF68</div>
+      <div class="science-claim">Multiple canine-specific controlled trials. A double-blind shelter study of 182 dogs showed lower diarrhea rates in the SF68 group. A separate study in puppies supplemented from weaning to one year showed stimulation of immune function including measurable increases in circulating immunoglobulin A and G. SF68 is one of two E. faecium strains approved as a feed additive for dogs by the European Commission.</div>
+      <div class="study-ref">
+        📄 Benyacoub et al. (2003), <em>Journal of Nutrition</em> , immune function in young dogs<br>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/12672936/" target="_blank">PubMed</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal reveal-delay-1">
+      <div class="evidence-tier tier-promising">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Promising evidence</span>
+      </div>
+      <div class="science-ing">B. coagulans BC30®</div>
+      <div class="science-claim">Canine-specific studies exist on stool quality and intestinal health indicators. Cornell University College of Veterinary Medicine has an active funded research award on BC30's effects on amino acid absorption and fecal microbiome in dogs. The strain has over 20 published clinical studies across species and is the only Bacillus strain with FDA GRAS status.</div>
+      <div class="study-ref">
+        📄 Cornell Vet , BC30 amino absorption and fecal microbiome in dogs<br>
+        <a href="https://www.vet.cornell.edu/research/awards/effects-probiotic-bacillus-coagulans-gbi-30-6086-bc30-amino-absorption-milk-protein-isolate" target="_blank">Cornell Vet</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal reveal-delay-2">
+      <div class="evidence-tier tier-promising">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Promising evidence</span>
+      </div>
+      <div class="science-ing">Inulin / FOS (chicory root)</div>
+      <div class="science-claim">A study from Texas A&M's Gastrointestinal Laboratory evaluated FOS and inulin supplementation directly in healthy dogs and cats over 16 days using 16S rRNA fecal profiling, finding microbiota changes attributable to prebiotic administration. Inulin consistently increases Bifidobacterium across randomised controlled trials in multiple species.</div>
+      <div class="study-ref">
+        📄 Pinna et al. (2017), <em>PeerJ</em> , fecal microbiota in dogs and cats with FOS/inulin<br>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28439463/" target="_blank">PubMed</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal reveal-delay-3">
+      <div class="evidence-tier tier-mechanism">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Veterinary practice, limited controlled trials</span>
+      </div>
+      <div class="science-ing">Organic Pumpkin Powder</div>
+      <div class="science-claim">Pumpkin is one of the most universally recommended foods by vets for canine digestive issues. Its mechanism is well understood: soluble fibre absorbs excess water in diarrhea; insoluble fibre adds bulk and draws water in constipation. No controlled trial isolates pumpkin powder alone in dogs. It appeared as one component of a fibre formula that significantly improved chronic diarrhea in 31 dogs in a prospective multicenter study.</div>
+      <div class="study-ref">
+        📄 Forster et al. (2022), <em>BMC Veterinary Research</em> , fibre-supplemented diet in dogs with chronic diarrhea<br>
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9229818/" target="_blank">PMC full text</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal">
+      <div class="evidence-tier tier-mechanism">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Veterinary practice, limited controlled trials</span>
+      </div>
+      <div class="science-ing">Digestive Enzyme Blend</div>
+      <div class="science-claim">Amylase, protease, and lipase are the enzymes the canine pancreas produces naturally to digest food. Their necessity is not in question. For dogs with exocrine pancreatic insufficiency, enzyme replacement is an evidence-based treatment. For healthy dogs, one controlled study in 14 Beagles found no improvement in macronutrient digestibility with enzyme supplementation. The rationale for inclusion is supportive rather than clinical, particularly for older dogs.</div>
+      <div class="study-ref">
+        📄 Villaverde et al. (2017), <em>British Journal of Nutrition</em> , enzyme supplements in healthy adult dogs<br>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28620487/" target="_blank">PubMed</a>
+      </div>
+    </div>
+
+    <div class="science-card reveal reveal-delay-1">
+      <div class="evidence-tier tier-mechanism">
+        <div class="tier-dot"></div>
+        <span class="tier-label">Well-established mechanism</span>
+      </div>
+      <div class="science-ing">Ginger Root Extract</div>
+      <div class="science-claim">Ginger is used in veterinary practice as an anti-nausea supplement. VCA Animal Hospitals documents its use for motion sickness and post-chemotherapy nausea in dogs. One study showed dogs receiving a chemotherapeutic agent experienced less vomiting when given ginger. The gingerol and shogaol compounds accelerate gastric motility. No standalone canine RCT on digestive benefit exists in the published literature.</div>
+      <div class="study-ref">
+        🏛 VCA Animal Hospitals , ginger in veterinary use<br>
+        <a href="https://vcahospitals.com/know-your-pet/ginger" target="_blank">VCA reference</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+═══════════════════════════════════════════════════ -->
+<section class="section section-alt" id="natural">
+  <div class="section-label reveal" style="color:var(--forest)">
+    <div class="line" style="background:var(--forest)"></div>
+    <span style="color:var(--forest)">Natural Sourcing</span>
+  </div>
+  <h2 class="section-title reveal">Where each ingredient comes from.</h2>
+  <p class="section-intro reveal">Each compound below exists in nature and is recognisable to your dog's body. Most are found in food, in the gut, or produced by the body itself. We list the source because it is part of understanding what you are giving your dog.</p>
+
+  <div class="sourcing-grid">
+    <div class="sourcing-card reveal">
+      <div class="sourcing-icon">🐚</div>
+      <div class="sourcing-name">Green-Lipped Mussel</div>
+      <div class="sourcing-origin">Marlborough Sounds, New Zealand</div>
+      <div class="sourcing-desc">Sustainably farmed in New Zealand's protected coastal waters. Freeze-dried whole, not extracted, to preserve the full natural complex of omega-3 ETA, glucosamine, chondroitin, and minerals.</div>
+    </div>
+    <div class="sourcing-card reveal reveal-delay-1">
+      <div class="sourcing-icon">🦐</div>
+      <div class="sourcing-name">Glucosamine Sulfate</div>
+      <div class="sourcing-origin">Wild-caught shellfish shells</div>
+      <div class="sourcing-desc">Derived from the discarded shells of wild-caught shrimp, a natural by-product of the seafood industry. The same glucosamine molecule your dog's cartilage produces. We use the sulfate form, which has better bioavailability than the HCl form found in most veterinary supplements.</div>
+    </div>
+    <div class="sourcing-card reveal reveal-delay-2">
+      <div class="sourcing-icon">🌳</div>
+      <div class="sourcing-name">Boswellia Serrata</div>
+      <div class="sourcing-origin">India, tapped from Boswellia trees</div>
+      <div class="sourcing-desc">Resin tapped from the bark of Boswellia trees, the same resin used in Ayurvedic medicine for centuries. Standardised to 65% boswellic acids so every dose delivers the same potency.</div>
+    </div>
+    <div class="sourcing-card reveal reveal-delay-3">
+      <div class="sourcing-icon">🌿</div>
+      <div class="sourcing-name">Turmeric Extract</div>
+      <div class="sourcing-origin">India, Curcuma longa root</div>
+      <div class="sourcing-desc">Ground from turmeric root, a kitchen staple used medicinally for 4,000 years. Concentrated to 95% curcuminoids. Paired with Bioperine so it is actually absorbed rather than passing through.</div>
+    </div>
+    <div class="sourcing-card reveal">
+      <div class="sourcing-icon">🦠</div>
+      <div class="sourcing-name">Probiotic Strains</div>
+      <div class="sourcing-origin">Cultured through natural fermentation</div>
+      <div class="sourcing-desc">Five strains, each naturally found in mammalian intestines. Cultured through fermentation, the oldest form of food preservation in existence. Each strain is named on the label with its CFU count.</div>
+    </div>
+    <div class="sourcing-card reveal reveal-delay-1">
+      <div class="sourcing-icon">🌱</div>
+      <div class="sourcing-name">Inulin / FOS</div>
+      <div class="sourcing-origin">Belgium, chicory root</div>
+      <div class="sourcing-desc">Extracted from chicory root. Found naturally in garlic, leeks, and bananas. Your dog does not digest it. It travels intact to the colon where it feeds the beneficial bacteria we have introduced through the probiotic strains.</div>
+    </div>
+    <div class="sourcing-card reveal reveal-delay-2">
+      <div class="sourcing-icon">🎃</div>
+      <div class="sourcing-name">Pumpkin Powder</div>
+      <div class="sourcing-origin">Organic, Canadian farms preferred</div>
+      <div class="sourcing-desc">Organic pumpkin, dried and powdered. 1,000mg per serving. The same vegetable recommended by vets for digestive upsets, at a dose that has a digestive effect rather than a decorative one.</div>
+    </div>
+    <div class="sourcing-card reveal reveal-delay-3">
+      <div class="sourcing-icon">🫚</div>
+      <div class="sourcing-name">Ginger Root Extract</div>
+      <div class="sourcing-origin">India, Zingiber officinale</div>
+      <div class="sourcing-desc">The same ginger used in cooking and tea for millennia. Standardised to 5% gingerols for a consistent dose. Supports gastric motility and reduces nausea. One of the few digestive ingredients that has both thousands of years of traditional use and a growing body of clinical literature behind it.</div>
+    </div>
+    <div class="sourcing-card reveal">
+      <div class="sourcing-icon">🐄</div>
+      <div class="sourcing-name">Chondroitin Sulfate</div>
+      <div class="sourcing-origin">Bovine cartilage</div>
+      <div class="sourcing-desc">Extracted from the cartilage of cattle, where it serves the same structural role it does in your dog's joints. Chondroitin is the most abundant proteoglycan in articular cartilage, acting as a sponge that draws water into the tissue to keep it cushioned and shock-absorbent.</div>
+    </div>
+    <div class="sourcing-card reveal reveal-delay-1">
+      <div class="sourcing-icon">🍊</div>
+      <div class="sourcing-name">Vitamin C (Calcium Ascorbate)</div>
+      <div class="sourcing-origin">Ascorbic acid, found in all plant foods</div>
+      <div class="sourcing-desc">Vitamin C in its calcium ascorbate form, chosen over plain ascorbic acid because it is gentler on the stomach. Found in every piece of fruit in existence. In the formula because collagen synthesis is biochemically impossible without it. It is the enzyme that stitches collagen fibres together.</div>
+    </div>
+    <div class="sourcing-card reveal reveal-delay-2">
+      <div class="sourcing-icon">💧</div>
+      <div class="sourcing-name">Hyaluronic Acid</div>
+      <div class="sourcing-origin">Microbial fermentation (rooster comb historically; now fermentation-derived)</div>
+      <div class="sourcing-desc">Naturally present in the synovial fluid of every joint in your dog's body, where it acts as a lubricant and shock absorber. Production declines with age. The fermentation-derived form used here is the same molecule the body makes, not a synthetic substitute.</div>
+    </div>
+    <div class="sourcing-card reveal reveal-delay-3">
+      <div class="sourcing-icon">🌶️</div>
+      <div class="sourcing-name">Black Pepper Extract (Bioperine)</div>
+      <div class="sourcing-origin">Piperine from Piper nigrum</div>
+      <div class="sourcing-desc">The compound that gives black pepper its heat, concentrated and standardised. Its only job in the formula is to increase curcumin absorption by up to 20x. Turmeric without piperine has very poor bioavailability. A small amount of one kitchen spice making another one actually work.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     ABOUT / STORY
+═══════════════════════════════════════════════════ -->
+<section class="section" id="about">
+  <div class="story-layout">
+    <div class="story-visual reveal">
+      <div class="story-img-placeholder">
+        <div class="story-visual-pattern"></div>
+        <div class="story-monogram">W</div>
+      </div>
+      <div class="story-accent-box">
+        <div class="big">17</div>
+        <div class="label">Active ingredients<br>across both formulas</div>
+      </div>
+    </div>
+
+    <div class="story-content">
+      <div class="section-label reveal" style="color:var(--forest)">
+        <div class="line" style="background:var(--forest)"></div>
+        <span>About Wolfcrest</span>
+      </div>
+
+      <h2 class="reveal">Started in Vancouver in 2026.</h2>
+
+      <p class="reveal">Wolfcrest started with a straightforward question: if you read the published research on pet joint supplements carefully, what would you actually put in the formula? The answer was different from what most brands sell. Leaving out MSM was the first decision. The rest of the formula followed from the same process.</p>
+
+      <p class="reveal">Two products at launch. Both manufactured at a Health Canada GMP-licensed facility in Ontario. Both shipped with a Certificate of Analysis for every batch. Both listed in full on this page, with doses, sources, and the studies behind each ingredient.</p>
+
+      <p class="reveal">The vet partnerships we are building are with clinics where the veterinarian has read the formula and the research. We do not send free product in exchange for social posts.</p>
+
+      <div class="story-pillars reveal">
+        <div class="story-pillar">
+          <div class="pillar-icon">🇨🇦</div>
+          <div>
+            <div class="pillar-name">Manufactured in Ontario</div>
+            <div class="pillar-desc">Health Canada GMP site-licensed facility. Certificate of Analysis for every batch. VHP Notification Numbers on every label.</div>
+          </div>
+        </div>
+        <div class="story-pillar">
+          <div class="pillar-icon">🔬</div>
+          <div>
+            <div class="pillar-name">Evidence-first formulation</div>
+            <div class="pillar-desc">Each ingredient on the science page links to the published research. Where the trial has limits, those limits are described. Where the evidence is mixed, that is stated.</div>
+          </div>
+        </div>
+        <div class="story-pillar">
+          <div class="pillar-icon">🐾</div>
+          <div>
+            <div class="pillar-name">Vet clinic partnerships</div>
+            <div class="pillar-desc">Supply at wholesale to clinics where the vet has reviewed the formula. No endorsement arrangements. No sponsored content.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     CTA / SUBSCRIBE
+═══════════════════════════════════════════════════ -->
+<section class="cta-section" id="subscribe">
+  <h2 class="reveal">Because more years together<br>starts with <em>what's in the bowl.</em></h2>
+  <p class="reveal">Wolfcrest is not open yet. Join the founding member waitlist and your first order ships with 30% off — that discount stays locked in as long as you subscribe.</p>
+
+  <div class="cta-cards reveal">
+    <div class="cta-card">
+      <span class="cta-card-tag">Joint & Hip Support</span>
+      <div class="cta-card-name">Mobility+</div>
+      <div class="cta-card-price">$44.99 / month · 30 soft chews</div>
+      <a href="#" class="cta-card-btn" onclick="openModal('mobility'); return false;">Join the Waitlist · 30% Off</a>
+      <div class="cta-card-name">Gut Guard</div>
+      <div class="cta-card-price">$38.99 / month · 150g powder</div>
+      <a href="#" class="cta-card-btn" onclick="openModal('gut'); return false;">Join the Waitlist · 30% Off</a>
+
+  <a href="#" class="cta-bundle reveal" onclick="openModal('bundle'); return false;">
+    <span class="bundle-badge">Save 15%</span>
+    Subscribe to both · Mobility+ + Gut Guard · $71.37/month
+  </a>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Wolfcrest Nutraceuticals</div>
+      <div class="footer-tagline">We explain every ingredient, link every study, and tell you what we left out and why.</div>
+      <div class="footer-vhp">Health Canada VHP Registered · Made in Canada</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Products</div>
+      <ul class="footer-links">
+        <li><a href="#products">Mobility+</a></li>
+        <li><a href="#products">Gut Guard</a></li>
+        <li><a href="#subscribe">Bundle · Save 15%</a></li>
+        <li><a href="#subscribe">Subscribe & Save</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Learn</div>
+      <ul class="footer-links">
+        <li><a href="#science">The Science</a></li>
+        <li><a href="#natural">Natural Sourcing</a></li>
+        <li><a href="#">Why No MSM?</a></li>
+        <li><a href="#">Dosing Guide</a></li>
+        <li><a href="#about">Our Story</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">For Vets</div>
+      <ul class="footer-links">
+        <li><a href="#">Research Library</a></li>
+        <li><a href="#">Clinic Partnership</a></li>
+        <li><a href="#">Wholesale Pricing</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Wolfcrest Nutraceuticals Inc. · Vancouver, BC · Canada</div>
+    <div>Privacy Policy · Terms of Use · VHP Reg. No. Pending</div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════
+     JS
+═══════════════════════════════════════════════════ -->
+<script>
+
+// ── SCROLL REVEAL ──────────────────────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── NAV SCROLL ─────────────────────────────────────
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.style.boxShadow = window.scrollY > 80 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
+});
+
+// ── PRODUCT CARD CLICK ─────────────────────────────
+document.querySelectorAll('.product-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// ── QUIZ ───────────────────────────────────────────
+const quizOverlay = document.getElementById('quiz-overlay');
+let currentStep = 1;
+const TOTAL_STEPS = 6;
+
+// Quiz state
+const Q = {
+  name: '', age: null, weight: null, weightKg: 0,
+  concerns: new Set(), activity: null, email: ''
+};
+
+function openQuiz() {
+  currentStep = 1;
+  Q.name = ''; Q.age = null; Q.weight = null; Q.weightKg = 0;
+  Q.concerns = new Set(); Q.activity = null; Q.email = '';
+  document.querySelectorAll('.quiz-option').forEach(o => {
+    o.classList.remove('selected');
+    o.querySelector('.quiz-option-check').textContent = '';
+  });
+  document.querySelectorAll('.quiz-weight-btn').forEach(b => b.classList.remove('selected'));
+  document.getElementById('q-dog-name').value = '';
+  document.getElementById('q-email').value = '';
+  document.getElementById('btn-2-next').disabled = true;
+  document.getElementById('btn-3-next').disabled = true;
+  document.getElementById('btn-4-next').disabled = true;
+  document.getElementById('btn-5-next').disabled = true;
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('quiz-results').classList.remove('active');
+  document.getElementById('quiz-step-1').classList.add('active');
+  updateProgress(1);
+  quizOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('q-dog-name').focus(), 150);
+}
+
+function closeQuiz() {
+  quizOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('quiz-close').addEventListener('click', closeQuiz);
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && quizOverlay.classList.contains('open')) closeQuiz(); });
+
+function updateProgress(step) {
+  const pct = step > TOTAL_STEPS ? 100 : Math.round(((step - 1) / TOTAL_STEPS) * 100);
+  document.getElementById('quiz-progress-fill').style.width = pct + '%';
+  document.getElementById('quiz-progress-label').textContent =
+    step > TOTAL_STEPS ? 'Your results' : 'Step ' + step + ' of ' + TOTAL_STEPS;
+}
+
+function goToStep(n) {
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('quiz-results').classList.remove('active');
+  const el = document.getElementById('quiz-step-' + n);
+  if (el) { el.classList.add('active'); currentStep = n; }
+  updateProgress(n);
+  // Sync name placeholders
+  const display = Q.name || 'your dog';
+  ['2','3','4','5','6'].forEach(i => {
+    const el = document.getElementById('step' + i + '-name');
+    if (el) el.textContent = Q.name || 'your dog';
+  });
+  window.scrollTo(0, 0);
+}
+
+function goToResults() {
+  buildResults();
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('quiz-results').classList.add('active');
+  updateProgress(TOTAL_STEPS + 1);
+  window.scrollTo(0, 0);
+}
+
+// Option selection (single)
+function selectOption(btn, group) {
+  document.querySelectorAll('[data-val]').forEach(b => {
+    if (b.closest('#quiz-step-' + currentStep)) {
+      b.classList.remove('selected');
+      const chk = b.querySelector('.quiz-option-check');
+      if (chk) chk.textContent = '';
+    }
+  });
+  btn.classList.add('selected');
+  const chk = btn.querySelector('.quiz-option-check');
+  if (chk) chk.textContent = '✓';
+  if (group === 'age') {
+    Q.age = btn.dataset.val;
+    document.getElementById('btn-2-next').disabled = false;
+  } else if (group === 'activity') {
+    Q.activity = btn.dataset.val;
+    document.getElementById('btn-5-next').disabled = false;
+  }
+}
+
+// Weight selection
+function selectWeight(btn) {
+  document.querySelectorAll('.quiz-weight-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  Q.weight = btn.dataset.val;
+  Q.weightKg = parseFloat(btn.dataset.kg);
+  document.getElementById('btn-3-next').disabled = false;
+}
+
+// Multi-select concerns
+function toggleConcern(btn) {
+  const val = btn.dataset.val;
+  if (btn.classList.contains('selected')) {
+    btn.classList.remove('selected');
+    btn.querySelector('.quiz-option-check').textContent = '';
+    Q.concerns.delete(val);
+  } else {
+    btn.classList.add('selected');
+    btn.querySelector('.quiz-option-check').textContent = '✓';
+    Q.concerns.add(val);
+  }
+  document.getElementById('btn-4-next').disabled = Q.concerns.size === 0;
+}
+
+// Step navigation
+document.getElementById('btn-1-next').addEventListener('click', () => {
+  Q.name = document.getElementById('q-dog-name').value.trim() || '';
+  const display = Q.name || 'your dog';
+  document.getElementById('step2-heading').innerHTML = 'How old is <em>' + (Q.name || 'your dog') + '</em>?';
+  goToStep(2);
+});
+document.getElementById('q-dog-name').addEventListener('keydown', e => {
+  if (e.key === 'Enter') document.getElementById('btn-1-next').click();
+});
+document.getElementById('btn-2-next').addEventListener('click', () => goToStep(3));
+document.getElementById('btn-3-next').addEventListener('click', () => goToStep(4));
+document.getElementById('btn-4-next').addEventListener('click', () => goToStep(5));
+document.getElementById('btn-5-next').addEventListener('click', () => goToStep(6));
+document.getElementById('btn-6-next').addEventListener('click', () => {
+  Q.email = document.getElementById('q-email').value.trim();
+  goToResults();
+});
+
+// ── RECOMMENDATION ENGINE ───────────────────────────
+function recommend() {
+  const c = Q.concerns;
+  const hasJoint = c.has('joint') || Q.age === 'senior' || Q.age === 'mature' || Q.activity === 'high';
+  const hasGut = c.has('gut') || c.has('anxiety');
+  const preventiveOnly = c.has('preventive') && !c.has('joint') && !c.has('gut') && !hasJoint;
+
+  if (preventiveOnly) return 'bundle';
+  if (hasJoint && hasGut) return 'bundle';
+  if (hasJoint) return 'mobility';
+  if (hasGut) return 'gut';
+  return 'bundle';
+}
+
+function mobDays(kg) {
+  if (kg < 10) return 60;
+  if (kg < 22.7) return 30;
+  if (kg < 40) return 15;
+  return 10;
+}
+function gutDays(kg) {
+  if (kg < 5) return 100;
+  if (kg < 15) return 50;
+  if (kg < 35) return 30;
+  return 20;
+}
+function mobDose(kg) {
+  if (kg < 10) return '½ chew / day (1 during loading)';
+  if (kg < 22.7) return '1 chew / day (2 during loading)';
+  if (kg < 40) return '2 chews / day (3 during loading)';
+  return '2–3 chews / day (3–4 during loading)';
+}
+function gutDose(kg) {
+  if (kg < 5) return '1.5g / day (¼ scoop)';
+  if (kg < 15) return '3g / day (½ scoop)';
+  if (kg < 35) return '5g / day (1 scoop)';
+  return '7.5g / day (1½ scoops)';
+}
+function mobCpd(kg) {
+  const days = mobDays(kg);
+  return (44.99 / days).toFixed(2);
+}
+function gutCpd(kg) {
+  const days = gutDays(kg);
+  return (38.99 / days).toFixed(2);
+}
+function deliveryFreq(days) {
+  if (days >= 60) return 'Every 2 months';
+  if (days >= 45) return 'Every 6 weeks';
+  if (days >= 28) return 'Every month';
+  if (days >= 14) return 'Every 2 weeks';
+  return 'Every 10 days';
+}
+
+function buildResults() {
+  const rec = recommend();
+  const kg = Q.weightKg || 22;
+  const name = Q.name || 'your dog';
+
+  document.getElementById('res-dog-name').textContent = name;
+
+  const headings = {
+    mobility: 'Mobility+ is the right fit.',
+    gut: 'Gut Guard is the right fit.',
+    bundle: 'Both products are relevant.'
+  };
+  const taglines = {
+    mobility: name + ' is a good candidate for joint and hip support. Here is the personalised breakdown based on their weight.',
+    gut: 'Gut Guard addresses what you described for ' + name + '. Here is the personalised breakdown based on their weight.',
+    bundle: 'Based on what you told us, ' + name + ' could benefit from both formulas. The bundle saves 15% versus ordering separately.'
+  };
+  document.getElementById('res-heading').textContent = headings[rec];
+  document.getElementById('res-tagline').textContent = taglines[rec];
+
+  const cards = document.getElementById('res-cards');
+  cards.innerHTML = '';
+
+  function makeCard(type) {
+    const isMob = type === 'mob';
+    const days = isMob ? mobDays(kg) : gutDays(kg);
+    const dose = isMob ? mobDose(kg) : gutDose(kg);
+    const cpd = isMob ? mobCpd(kg) : gutCpd(kg);
+    const freq = deliveryFreq(days);
+    const price = isMob ? '$44.99' : '$38.99';
+    const name2 = isMob ? 'Mobility+' : 'Gut Guard';
+    const tag = isMob ? 'Joint & Hip Support' : 'Digestive & Immune';
+    const note = isMob
+      ? '<strong>Loading phase:</strong> Double the dose for the first 4 to 6 weeks for best results. Your subscription will ship at the standard rate — you may use extra from your first delivery during loading.'
+      : '<strong>Best taken</strong> sprinkled over the morning meal. Consistent daily use matters more than timing.';
+
+    return `
+      <div class="result-card">
+        <div class="result-card-header ${isMob ? 'mob' : 'gut'}">
+          <div>
+            <span class="result-card-tag">${tag}</span>
+            <div class="result-card-name">${name2}</div>
+          </div>
+          <div class="result-card-price">
+            <span class="price-amount">${price}</span>
+            <span class="price-sub">per month</span>
+          </div>
+        </div>
+        <div class="result-card-body">
+          <div class="result-stat">
+            <div class="result-stat-label">Daily dose</div>
+            <div class="result-stat-val">${dose}</div>
+          </div>
+          <div class="result-stat">
+            <div class="result-stat-label">Jar lasts</div>
+            <div class="result-stat-val highlight">${days} days</div>
+          </div>
+          <div class="result-stat">
+            <div class="result-stat-label">Delivery</div>
+            <div class="result-stat-val">${freq}</div>
+          </div>
+        </div>
+        <div class="result-note">${note}</div>
+      </div>`;
+  }
+
+  if (rec === 'mobility') { cards.innerHTML = makeCard('mob'); }
+  else if (rec === 'gut') { cards.innerHTML = makeCard('gut'); }
+  else {
+    cards.innerHTML = makeCard('mob') + makeCard('gut');
+    // Add bundle saving note
+    const bundleNote = document.createElement('div');
+    bundleNote.style.cssText = 'padding:14px 20px;background:var(--forest-lt);border-radius:6px;font-size:13px;color:var(--forest);';
+    bundleNote.innerHTML = '<strong>Bundle discount:</strong> Subscribe to both and pay $71.37/month — saving 15% versus ordering separately.';
+    cards.appendChild(bundleNote);
+  }
+
+  // Wire up CTA
+  document.getElementById('res-cta-btn').onclick = () => {
+    closeQuiz();
+    openModal(rec === 'bundle' ? 'bundle' : rec === 'mobility' ? 'mobility' : 'gut');
+  };
+}
+
+const overlay = document.getElementById('modal-overlay');
+const modalClose = document.getElementById('modal-close');
+const modalForm = document.getElementById('modal-form');
+const modalSuccess = document.getElementById('modal-success');
+const modalFormView = document.getElementById('modal-form-view');
+const modalEyebrow = document.getElementById('modal-eyebrow');
+const modalHeading = document.getElementById('modal-heading');
+const modalBody = document.getElementById('modal-body');
+const modalSubmit = document.getElementById('modal-submit');
+
+const configs = {
+  mobility: {
+    eyebrow: 'Mobility+ · Joint & Hip Support',
+    eyebrowClass: 'mobility',
+    heading: 'Reserve your founding member spot',
+    body: 'Mobility+ launches soon at $44.99/month. Join the waitlist and your first order ships with 30% off — locked in as long as you stay subscribed.'
+  },
+  gut: {
+    eyebrow: 'Gut Guard · Digestive & Immune',
+    eyebrowClass: 'mobility',
+    heading: 'Reserve your founding member spot',
+    body: 'Gut Guard launches soon at $38.99/month. Join the waitlist and your first order ships with 30% off — locked in as long as you stay subscribed.'
+  },
+  bundle: {
+    eyebrow: 'Mobility+ + Gut Guard Bundle',
+    eyebrowClass: 'bundle',
+    heading: 'Reserve your founding member spot',
+    body: 'The bundle ships both products at $71.37/month — 15% off individual pricing. Founding members get a further 30% off their first delivery.'
+  },
+  general: {
+    eyebrow: 'Founding Member Waitlist',
+    eyebrowClass: '',
+    heading: 'Join the waitlist',
+    body: 'The store is not open yet. Leave your email and you will be first to know when we launch — with 30% off your first order, reserved for founding members only.'
+  }
+};
+
+function openModal(type) {
+  const cfg = configs[type] || configs.general;
+  modalEyebrow.textContent = cfg.eyebrow;
+  modalEyebrow.className = 'modal-eyebrow ' + cfg.eyebrowClass;
+  modalHeading.textContent = cfg.heading;
+  modalBody.textContent = cfg.body;
+  modalFormView.style.display = '';
+  modalSuccess.classList.remove('show');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('wl-name').focus(), 100);
+}
+
+function closeModal() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+modalClose.addEventListener('click', closeModal);
+overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+modalForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('wl-name').value.trim();
+  const email = document.getElementById('wl-email').value.trim();
+  if (!name || !email) return;
+
+  // Disable button to prevent double-submit
+  modalSubmit.disabled = true;
+  modalSubmit.textContent = 'Saving your spot...';
+
+  // In production this POST goes to Klaviyo / Mailchimp / your backend.
+  // For now we simulate a 600ms delay then show success.
+  setTimeout(() => {
+    modalFormView.style.display = 'none';
+    const successName = document.getElementById('modal-success-name');
+    successName.textContent = name ? name + ', you\'re on the list.' : 'You\'re on the list.';
+    modalSuccess.classList.add('show');
+    modalSubmit.disabled = false;
+    modalSubmit.textContent = 'Reserve My Founding Member Spot';
+    // Reset form for next time
+    modalForm.reset();
+  }, 600);
+});
+</script>
+
+<!-- ═══════════════════════════════════════════════════
+     DOG PROFILE QUIZ
+═══════════════════════════════════════════════════ -->
+<div class="quiz-overlay" id="quiz-overlay" role="dialog" aria-modal="true" aria-label="Dog profile quiz">
+
+  <div class="quiz-header">
+    <div class="quiz-logo">Wolfcrest</div>
+    <div class="quiz-progress-wrap">
+      <div class="quiz-progress-label" id="quiz-progress-label">Step 1 of 6</div>
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quiz-progress-fill"></div></div>
+    </div>
+    <button class="quiz-close" id="quiz-close" aria-label="Close quiz">✕</button>
+  </div>
+
+  <div class="quiz-body">
+
+    <!-- STEP 1: Dog's name -->
+    <div class="quiz-step active" id="quiz-step-1">
+      <div class="quiz-step-eyebrow">Let's start here</div>
+      <h2>What's your dog's name?</h2>
+      <p class="quiz-step-sub">We'll use this to personalise your recommendation.</p>
+      <div class="quiz-input-wrap">
+        <input type="text" id="q-dog-name" placeholder="Buddy" autocomplete="off" maxlength="40">
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-btn-next" id="btn-1-next">Continue <span>→</span></button>
+      </div>
+    </div>
+
+    <!-- STEP 2: Dog's age -->
+    <div class="quiz-step" id="quiz-step-2">
+      <div class="quiz-step-eyebrow" id="step2-eyebrow">About your dog</div>
+      <h2 id="step2-heading">How old is <em id="step2-name">your dog</em>?</h2>
+      <p class="quiz-step-sub">Age is one of the key factors in which formula is right.</p>
+      <div class="quiz-options two-col">
+        <button class="quiz-option" data-val="puppy" onclick="selectOption(this,'age')">
+          <span class="quiz-option-icon">🐶</span>
+          <span class="quiz-option-text">
+            <span class="quiz-option-label">Under 2 years</span>
+            <span class="quiz-option-desc">Still growing</span>
+          </span>
+          <span class="quiz-option-check"></span>
+        </button>
+        <button class="quiz-option" data-val="adult" onclick="selectOption(this,'age')">
+          <span class="quiz-option-icon">🐕</span>
+          <span class="quiz-option-text">
+            <span class="quiz-option-label">2 to 5 years</span>
+            <span class="quiz-option-desc">Prime adult</span>
+          </span>
+          <span class="quiz-option-check"></span>
+        </button>
+        <button class="quiz-option" data-val="mature" onclick="selectOption(this,'age')">
+          <span class="quiz-option-icon">🦴</span>
+          <span class="quiz-option-text">
+            <span class="quiz-option-label">5 to 8 years</span>
+            <span class="quiz-option-desc">Mature adult</span>
+          </span>
+          <span class="quiz-option-check"></span>
+        </button>
+        <button class="quiz-option" data-val="senior" onclick="selectOption(this,'age')">
+          <span class="quiz-option-icon">🐾</span>
+          <span class="quiz-option-text">
+            <span class="quiz-option-label">8 years or older</span>
+            <span class="quiz-option-desc">Senior</span>
+          </span>
+          <span class="quiz-option-check"></span>
+        </button>
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-btn-next" id="btn-2-next" disabled>Continue <span>→</span></button>
+        <button class="quiz-btn-back" onclick="goToStep(1)">← Back</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: Weight -->
+    <div class="quiz-step" id="quiz-step-3">
+      <div class="quiz-step-eyebrow">About your dog</div>
+      <h2>How much does <em id="step3-name">your dog</em> weigh?</h2>
+      <p class="quiz-step-sub">Weight determines both the daily dose and how long each jar lasts.</p>
+      <div class="quiz-weight-options">
+        <button class="quiz-weight-btn" data-val="xs" data-kg="4.5" onclick="selectWeight(this)">
+          <span class="weight-range">Under 22 lb</span>
+          <span class="weight-example">Chihuahua, Yorkie, Shih Tzu</span>
+        </button>
+        <button class="quiz-weight-btn" data-val="s" data-kg="14" onclick="selectWeight(this)">
+          <span class="weight-range">22 to 44 lb</span>
+          <span class="weight-example">Beagle, Cocker Spaniel, Corgi</span>
+        </button>
+        <button class="quiz-weight-btn" data-val="m" data-kg="30" onclick="selectWeight(this)">
+          <span class="weight-range">44 to 77 lb</span>
+          <span class="weight-example">Border Collie, Labrador, Husky</span>
+        </button>
+        <button class="quiz-weight-btn" data-val="l" data-kg="50" onclick="selectWeight(this)">
+          <span class="weight-range">77 lb or over</span>
+          <span class="weight-example">German Shepherd, Great Dane, Rottweiler</span>
+        </button>
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-btn-next" id="btn-3-next" disabled>Continue <span>→</span></button>
+        <button class="quiz-btn-back" onclick="goToStep(2)">← Back</button>
+      </div>
+    </div>
+
+    <!-- STEP 4: Health concerns -->
+    <div class="quiz-step" id="quiz-step-4">
+      <div class="quiz-step-eyebrow">Health picture</div>
+      <h2>What are you hoping to support for <em id="step4-name">your dog</em>?</h2>
+      <p class="quiz-step-sub">Select all that apply.</p>
+      <div class="quiz-multiselect-hint">✓ Select one or more</div>
+      <div class="quiz-options">
+        <button class="quiz-option" data-val="joint" onclick="toggleConcern(this)">
+          <span class="quiz-option-icon">🦴</span>
+          <span class="quiz-option-text">
+            <span class="quiz-option-label">Joint, hip or mobility issues</span>
+            <span class="quiz-option-desc">Stiffness, slow to rise, limping, or age-related joint changes</span>
+          </span>
+          <span class="quiz-option-check"></span>
+        </button>
+        <button class="quiz-option" data-val="gut" onclick="toggleConcern(this)">
+          <span class="quiz-option-icon">🌿</span>
+          <span class="quiz-option-text">
+            <span class="quiz-option-label">Digestive or gut health</span>
+            <span class="quiz-option-desc">Loose stools, sensitive stomach, gas, or recent antibiotics</span>
+          </span>
+          <span class="quiz-option-check"></span>
+        </button>
+        <button class="quiz-option" data-val="preventive" onclick="toggleConcern(this)">
+          <span class="quiz-option-icon">🛡️</span>
+          <span class="quiz-option-text">
+            <span class="quiz-option-label">Preventive support</span>
+            <span class="quiz-option-desc">No current issues — I want to stay ahead of problems</span>
+          </span>
+          <span class="quiz-option-check"></span>
+        </button>
+        <button class="quiz-option" data-val="anxiety" onclick="toggleConcern(this)">
+          <span class="quiz-option-icon">🧠</span>
+          <span class="quiz-option-text">
+            <span class="quiz-option-label">Anxiety or nervous behaviour</span>
+            <span class="quiz-option-desc">Barking, pacing, separation anxiety, noise sensitivity</span>
+          </span>
+          <span class="quiz-option-check"></span>
+        </button>
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-btn-next" id="btn-4-next" disabled>See the recommendation <span>→</span></button>
+        <button class="quiz-btn-back" onclick="goToStep(3)">← Back</button>
+      </div>
+    </div>
+
+    <!-- STEP 5: Activity level -->
+    <div class="quiz-step" id="quiz-step-5">
+      <div class="quiz-step-eyebrow">One more thing</div>
+      <h2>How active is <em id="step5-name">your dog</em>?</h2>
+      <p class="quiz-step-sub">Activity level affects joint wear and helps us set the right loading phase expectation.</p>
+      <div class="quiz-options">
+        <button class="quiz-option" data-val="low" onclick="selectOption(this,'activity')">
+          <span class="quiz-option-icon">🛋️</span>
+          <span class="quiz-option-text">
+            <span class="quiz-option-label">Mostly relaxed</span>
+            <span class="quiz-option-desc">Short walks, happy to nap — a true homebody</span>
+          </span>
+          <span class="quiz-option-check"></span>
+        </button>
+        <button class="quiz-option" data-val="moderate" onclick="selectOption(this,'activity')">
+          <span class="quiz-option-icon">🚶</span>
+          <span class="quiz-option-text">
+            <span class="quiz-option-label">Moderate</span>
+            <span class="quiz-option-desc">Daily walks, occasional runs or play sessions</span>
+          </span>
+          <span class="quiz-option-check"></span>
+        </button>
+        <button class="quiz-option" data-val="high" onclick="selectOption(this,'activity')">
+          <span class="quiz-option-icon">🏃</span>
+          <span class="quiz-option-text">
+            <span class="quiz-option-label">Very active</span>
+            <span class="quiz-option-desc">Running, hiking, agility, working dog, or high-energy breed</span>
+          </span>
+          <span class="quiz-option-check"></span>
+        </button>
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-btn-next" id="btn-5-next" disabled>See the recommendation <span>→</span></button>
+        <button class="quiz-btn-back" onclick="goToStep(4)">← Back</button>
+      </div>
+    </div>
+
+    <!-- STEP 6: Email for results -->
+    <div class="quiz-step" id="quiz-step-6">
+      <div class="quiz-step-eyebrow">Almost there</div>
+      <h2>Where should we send <em id="step6-name">the results</em>?</h2>
+      <p class="quiz-step-sub">We'll email you the full recommendation, dosing schedule, and founding member discount. No other emails unless you ask.</p>
+      <div class="quiz-input-wrap">
+        <input type="email" id="q-email" placeholder="you@example.com" autocomplete="email">
+      </div>
+      <div class="quiz-nav">
+        <button class="quiz-btn-next" id="btn-6-next">Show my results <span>→</span></button>
+        <button class="quiz-btn-back" onclick="goToStep(5)">← Back</button>
+      </div>
+      <p style="font-size:12px;color:var(--muted);margin-top:16px;">Or <button onclick="goToResults()" style="background:none;border:none;cursor:pointer;color:var(--forest);font-size:12px;text-decoration:underline;font-family:'Jost',sans-serif;padding:0;">skip and see results now</button></p>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="quiz-results" id="quiz-results">
+      <p class="results-greeting">Here's what we recommend for <strong id="res-dog-name">your dog</strong></p>
+      <h2 id="res-heading">Based on what you told us</h2>
+      <p class="results-tagline" id="res-tagline"></p>
+      <div class="results-cards" id="res-cards"></div>
+      <div class="results-cta-row">
+        <button class="results-cta-primary" id="res-cta-btn">Join the Founding Waitlist</button>
+        <button class="results-cta-secondary" onclick="closeQuiz()">Back to the site</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     WAITLIST MODAL
+═══════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+
+    <div id="modal-form-view">
+      <div class="modal-eyebrow" id="modal-eyebrow">Founding Member</div>
+      <h3 id="modal-heading">Join the waitlist</h3>
+      <p class="modal-body" id="modal-body">The store is not open yet. Leave your email and you will be the first to know when we launch — with 30% off your first order, reserved for founding members only.</p>
+
+      <div class="modal-badge">
+        <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7l-3.7 2.1.7-4.1-3-2.9 4.1-.6z"/></svg>
+        30% off · Free shipping · Cancel anytime
+      </div>
+
+      <form class="modal-form" id="modal-form" novalidate>
+        <div class="modal-field">
+          <label for="wl-name">Your name</label>
+          <input type="text" id="wl-name" name="name" placeholder="First name" autocomplete="given-name" required>
+        </div>
+        <div class="modal-field">
+          <label for="wl-email">Email address</label>
+          <input type="email" id="wl-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+        <div class="modal-field">
+          <label for="wl-dog">Your dog's name <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+          <input type="text" id="wl-dog" name="dog" placeholder="Who are we making this for?">
+        </div>
+        <button type="submit" class="modal-submit" id="modal-submit">Reserve My Founding Member Spot</button>
+      </form>
+      <p class="modal-legal">No spam. One email when we launch. Unsubscribe any time.</p>
+    </div>
+
+    <div class="modal-success" id="modal-success">
+      <div class="modal-success-icon">🐾</div>
+      <h4 id="modal-success-name">You're on the list.</h4>
+      <p>We'll email you the moment the store opens. Your 30% founding member discount will be waiting.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
